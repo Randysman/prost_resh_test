@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Settings(BaseSettings):
+    database_url: str = os.getenv("DATABASE_URL")
     database_url_sync: str = os.getenv("DATABASE_URL_SYNC")
 
     deribit_base_url: str = "https://www.deribit.com/api/v2"
